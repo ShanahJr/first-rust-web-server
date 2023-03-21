@@ -7,6 +7,9 @@ use std::{
 
 fn main() {
 
+    let path = env::current_dir().unwrap();
+    println!("The current directory is: {}", path.display());
+
     let port = env::var("PORT")
         .expect("Variable for port not found");
 
@@ -25,7 +28,7 @@ fn handle_connection(mut stream: TcpStream) {
     let _http_request: Vec<_> = buf_reader
         .lines()
         .map(|result| result
-                .expect("faild to get result rom http request lines"))
+                .expect("failed to get result rom http request lines"))
         .take_while(|line| !line.is_empty())
         .collect();
 
