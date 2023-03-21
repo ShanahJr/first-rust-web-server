@@ -5,7 +5,7 @@ use std::{
 };
 
 fn main() {
-    let listener = TcpListener::bind("0.0.0.0:$PORT").unwrap();
+    let listener = TcpListener::bind("0.0.0.0:2121").unwrap();
 
     for stream in listener.incoming() {
         let stream = stream.unwrap();
