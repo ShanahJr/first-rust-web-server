@@ -1,8 +1,12 @@
 [package]
-name = "web_server"
+name = "rust_web_server"
 version = "0.1.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+rust-embed="6.6.1"
+
+[env]
+PORT="8000"
